@@ -17,13 +17,10 @@ Hyprland desktop config on Debian (trixie). Catppuccin-inspired colors — dark 
 ## Quick start
 
 ```bash
-# Install stow (symlink manager)
-sudo apt install stow
-
-# Clone and activate
+sudo apt install stow make
 git clone <your-repo-url> ~/dotfiles
 cd ~/dotfiles
-./bootstrap.sh
+make install
 ```
 
 ## How stow works
