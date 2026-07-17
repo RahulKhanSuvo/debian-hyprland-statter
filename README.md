@@ -1,6 +1,6 @@
-# Debian — Hyprland Desktop
+# Debian Hyprland Starter
 
-Simple Debian setup with Hyprland, dark Catppuccin-inspired theme.
+One-command Hyprland desktop on Debian trixie/testing. Dark Catppuccin-inspired theme, sane keybinds, ready to go.
 
 ## Fresh install
 
