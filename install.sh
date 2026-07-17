@@ -23,9 +23,12 @@ PACKAGES=(
   # Network
   network-manager network-manager-applet network-manager-gnome
 
+  # File manager
+  thunar
+
   # System
   btop wlogout stow brightnessctl numlockx
-  jq gnome-keyring libnotify-bin
+  jq gnome-keyring libnotify-bin hyprland-guiutils
 
   # Fonts (JetBrainsMono from Debian repos)
   fonts-jetbrains-mono

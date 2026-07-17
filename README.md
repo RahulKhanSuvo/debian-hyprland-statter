@@ -144,6 +144,16 @@ mv ~/.config/myapp/config ~/dotfiles/myapp/.config/myapp/
 cd ~/dotfiles && stow myapp
 ```
 
+## Manual installs (not in apt)
+
+These programs are referenced by keybinds but must be installed separately:
+
+| Program        | Where to get it                        |
+|----------------|----------------------------------------|
+| JetBrainsMono Nerd Font | [nerdfonts.com](https://www.nerdfonts.com/font-downloads) |
+| Brave Browser  | [brave.com/linux](https://brave.com/linux/) |
+| Zed Editor     | [zed.dev/download](https://zed.dev/download) |
+
 ## Notes
 
 - **Hyprland 0.55.2** (Debian package) — does NOT support: `windowrule = float/center`, `decoration { drop_shadow, shadow_range, ... }`, `blur { ... }` block syntax, `misc { allow_swallow, ... }`
