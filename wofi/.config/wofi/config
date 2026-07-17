@@ -1,0 +1,20 @@
+# Wofi Configuration Options
+
+# Enable application icons next to text names
+allow_images=true
+
+# Search terms won't care about uppercase/lowercase letters
+insensitive=true
+
+# Hide the scrollbar completely for a cleaner look
+hide_scroll=true
+
+# Prompt label inside the entry box
+prompt=Search Apps...
+
+# Set dimensions (adjust these numbers if you want it wider or taller)
+width=600
+height=450
+
+# Positioning (centered on your display layout)
+location=center

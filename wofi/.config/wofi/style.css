@@ -1,0 +1,86 @@
+/* Link Wofi directly to your active GTK theme palette */
+@define-color base                  @theme_bg_color;
+@define-color mantle                @theme_base_color;
+@define-color text                  @theme_fg_color;
+@define-color mauve                 @theme_selected_fg_color;
+@define-color lavender              @theme_selected_bg_color;
+
+/* Fallbacks for surfaces if your GTK theme flavor doesn't expose them */
+@define-color surface1              mix(@text, @base, 0.15);
+@define-color surface2              mix(@text, @base, 0.25);
+@define-color red                   #f38ba8; 
+
+* {
+  font-family: 'CaskaydiaCove Nerd Font', monospace;
+  font-size: 16px;
+}
+
+/* 1. Make the root window completely transparent so the dark layer goes away */
+window {
+  margin: 0px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+/* 2. Move your background color, border, and rounded corners here */
+#outer-box {
+  margin: 0px;
+  padding: 15px;
+  border: 1px solid @lavender;
+  border-radius: 4px;
+  background-color: @base;
+}
+
+/* 3. Keep everything else transparent inside */
+#inner-box {
+  margin: 5px 0px 0px 0px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+#scroll {
+  margin: 5px 0px;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+/* Search Bar Input */
+#input {
+  margin: 5px 10px 15px 10px;
+  padding: 6px 10px;
+  border: 1px solid @surface2;
+  border-radius: 4px;
+  color: @text;
+  background-color: @mantle;
+}
+
+#input:focus {
+  border: 1px solid @lavender;
+}
+
+/* List Items */
+#text {
+  margin: 5px 10px;
+  border: none;
+  color: @text;
+}
+
+#entry {
+  padding: 5px;
+  margin: 2px 0px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+/* Active Item Selection */
+#entry:selected {
+  background-color: @lavender;
+}
+
+#entry:selected #text {
+  color: @base;
+  font-weight: bold;
+}

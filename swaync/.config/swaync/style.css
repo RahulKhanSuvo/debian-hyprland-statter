@@ -1,0 +1,132 @@
+@define-color highlight rgba(117, 241, 250, 1);
+@define-color dark-9 rgba(24, 24, 27, 1);
+@define-color dark-8 rgba(39, 39, 42, 1);
+@define-color dark-7 rgba(63, 63, 70, 1);
+@define-color text white;
+
+* {
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 14px;
+}
+
+.notification-row {
+  outline: none;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: @dark-8;
+}
+
+.notification {
+  border-radius: 6px;
+  margin: 6px 12px;
+  padding: 0;
+  background: @dark-9;
+  border: 1px solid @dark-7;
+}
+
+.notification-content {
+  background: transparent;
+  padding: 6px;
+}
+
+.close-button {
+  background: transparent;
+  color: red;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-right: 16px;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 6px;
+  margin: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  background: @dark-8;
+}
+
+.summary {
+  font-weight: 700;
+  color: @highlight;
+}
+
+.time {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.body {
+  color: @text;
+}
+
+.control-center {
+  background: @dark-9;
+  border: 1px solid @dark-7;
+  border-radius: 6px;
+  padding: 0;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.widget-title {
+  margin: 12px 12px 6px;
+}
+
+.widget-title button {
+  background: @dark-8;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: white;
+}
+
+.widget-title button:hover {
+  background: @dark-7;
+}
+
+.widget-dnd {
+  margin: 6px 12px;
+}
+
+.widget-dnd > label {
+  font-weight: 600;
+}
+
+.widget-dnd > switch {
+  background: @dark-8;
+  border-radius: 12px;
+}
+
+.widget-dnd > switch:checked {
+  background: @highlight;
+}
+
+.widget-mpris {
+  background: @dark-8;
+  border-radius: 6px;
+  margin: 6px 12px;
+  padding: 8px;
+}
+
+.widget-mpris > box > button {
+  border-radius: 6px;
+}
