@@ -35,14 +35,41 @@ install_packages() {
   sudo apt-get install -y "${PACKAGES[@]}"
 }
 
+ALL_PACKAGES="hypr waybar swaync wofi gtk kitty greetd"
+USER_PACKAGES="hypr waybar swaync wofi gtk kitty"
+
+stow_single() {
+  local pkg="$1"
+  cd "$DOTFILES_DIR"
+  if [ "$pkg" = "greetd" ]; then
+    echo "  sudo stow greetd"
+    sudo stow greetd
+  elif echo "$USER_PACKAGES" | grep -qw "$pkg"; then
+    echo "  stow $pkg"
+    stow "$pkg"
+  else
+    echo "Unknown package: $pkg"
+    echo "Available: $ALL_PACKAGES"
+    exit 1
+  fi
+}
+
 case "${1:-}" in
   --dotfiles)
-    stow_dotfiles
+    if [ $# -gt 1 ]; then
+      shift
+      for pkg in "$@"; do stow_single "$pkg"; done
+    else
+      stow_dotfiles
+    fi
     ;;
   --help|-h)
-    echo "Usage: ./install.sh [--dotfiles]"
-    echo "  (no args)  — full install (packages + dotfiles)"
-    echo "  --dotfiles — dotfiles only (stow symlinks)"
+    echo "Usage: ./install.sh [--dotfiles] [package...]"
+    echo "  (no args)       — full install (packages + all dotfiles)"
+    echo "  --dotfiles      — all dotfiles only"
+    echo "  --dotfiles hypr — just hyprland config"
+    echo "  --dotfiles waybar — just waybar config"
+    echo "  Packages: $ALL_PACKAGES"
     ;;
   "")
     install_packages
@@ -55,8 +82,8 @@ case "${1:-}" in
     echo "  for full icon support in waybar and kitty."
     ;;
   *)
-    echo "Unknown option: $1"
-    echo "Usage: ./install.sh [--dotfiles]"
+    echo "Unknown: $1"
+    echo "Usage: ./install.sh [--dotfiles] [package...]"
     exit 1
     ;;
 esac

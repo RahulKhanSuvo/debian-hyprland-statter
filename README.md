@@ -24,8 +24,13 @@ If packages are already installed, just link the configs:
 
 ```bash
 cd ~/dotfiles
-./install.sh --dotfiles
+./install.sh --dotfiles          # all configs
+./install.sh --dotfiles waybar   # just waybar
+./install.sh --dotfiles hypr     # just hyprland
+./install.sh --dotfiles kitty swaync  # pick multiple
 ```
+
+Available: `hypr`, `waybar`, `swaync`, `wofi`, `gtk`, `kitty`, `greetd`
 
 ## What you get
 
