@@ -6,11 +6,11 @@ Simple Debian setup with Hyprland, dark Catppuccin-inspired theme.
 
 ```bash
 # 1. Install Debian (trixie/testing) with standard tools
-# 2. Install stow and clone dotfiles
+# 2. Clone dotfiles
 sudo apt install stow git
 git clone <your-repo-url> ~/dotfiles
 
-# 3. Install everything
+# 3. Full install (packages + dotfiles)
 cd ~/dotfiles
 ./install.sh
 
@@ -18,7 +18,14 @@ cd ~/dotfiles
 systemctl reboot
 ```
 
-`install.sh` runs `apt install` on all needed packages then stows configs into place.
+## Dotfiles only
+
+If packages are already installed, just link the configs:
+
+```bash
+cd ~/dotfiles
+./install.sh --dotfiles
+```
 
 ## What you get
 
