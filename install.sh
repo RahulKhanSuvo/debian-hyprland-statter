@@ -29,6 +29,7 @@ install_packages() {
     btop wlogout stow brightnessctl numlockx
     jq gnome-keyring libnotify-bin hyprland-guiutils
     fonts-jetbrains-mono
+    fzf
   )
   echo "==> Installing packages..."
   sudo apt-get update
