@@ -17,10 +17,10 @@ Hyprland desktop config on Debian (trixie). Catppuccin-inspired colors — dark 
 ## Quick start
 
 ```bash
-sudo apt install stow make
+sudo apt install stow
 git clone <your-repo-url> ~/dotfiles
 cd ~/dotfiles
-make install
+./install.sh
 ```
 
 ## How stow works
