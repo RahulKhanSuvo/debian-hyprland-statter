@@ -74,6 +74,7 @@ Available: `hypr`, `waybar`, `swaync`, `wofi`, `gtk`, `kitty`, `greetd`
 | `SUPER + SHIFT + R`        | Reload config                 |
 | `SUPER + SHIFT + E`        | Shutdown                      |
 | `SUPER + ALT + R`          | Restart Hyprland              |
+| `SUPER + P`                | Wallpaper picker (wofi)       |
 | `SUPER + period`           | Emoji picker                  |
 | `PRINT`                    | Full screenshot               |
 
